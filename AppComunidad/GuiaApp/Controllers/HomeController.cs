@@ -23,6 +23,11 @@ namespace GuiaApp.Controllers
             return View();
         }
 
+        public IActionResult IndexCliente()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

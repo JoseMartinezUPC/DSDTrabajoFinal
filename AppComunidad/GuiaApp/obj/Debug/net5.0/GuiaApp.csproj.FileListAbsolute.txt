@@ -99,7 +99,6 @@ C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\GuiaApp.TagHelpers.input.cache
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\GuiaApp.TagHelpers.output.cache
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\GuiaApp.RazorCoreGenerate.cache
-C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -116,3 +115,6 @@ C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\GuiaApp.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Seguridad\Login.cshtml.g.cs
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Seguridad\Create.cshtml.g.cs
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Shared\_LayoutCliente.cshtml.g.cs
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Home\IndexCliente.cshtml.g.cs
