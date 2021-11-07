@@ -15,5 +15,10 @@ namespace GuiaApp.Controllers
             return View();
         }
 
+        public ActionResult Ingresar(string usuario,string password)
+        {
+            return RedirectToAction("Index","Home");
+        }
+
     }
 }
