@@ -114,3 +114,4 @@ C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\ref\GuiaApp.dll
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\GuiaApp.pdb
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\GuiaApp.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Seguridad\Login.cshtml.g.cs
