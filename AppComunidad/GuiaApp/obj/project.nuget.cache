@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Lx/0gN+i16bMwjXQGuo0BN1+QJv6xf3TR8dRwoqQIbOZx/Qtg4Q5UAeBUQ+pcY+Hsn3/yx+rxKs5ssEPY9CZuA==",
+  "dgSpecHash": "Bmb8u6sgh01DaXFPRKtmG8KTELKAwIML5+i2BB7XO5j00qFTGZVS3iqPhNae2yHa+5kxQeGY/TgqSQYP9XOFBg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuario\\Desktop\\DSD\\DSDTrabajoFinal\\AppComunidad\\GuiaApp\\GuiaApp.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.typescript.msbuild\\4.4.4\\microsoft.typescript.msbuild.4.4.4.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration\\5.0.2\\microsoft.visualstudio.web.codegeneration.5.0.2.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.contracts\\5.0.2\\microsoft.visualstudio.web.codegeneration.contracts.5.0.2.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.core\\5.0.2\\microsoft.visualstudio.web.codegeneration.core.5.0.2.nupkg.sha512",
