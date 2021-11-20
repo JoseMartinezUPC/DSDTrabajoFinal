@@ -18,12 +18,12 @@ namespace GuiaApp.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Admin()
         {
             return View();
         }
 
-        public IActionResult IndexCliente()
+        public IActionResult Cliente()
         {
             return View();
         }

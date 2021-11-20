@@ -17,7 +17,7 @@ namespace GuiaApp.Controllers
 
         public ActionResult Ingresar(string usuario,string password)
         {
-            return RedirectToAction("IndexCliente","Home");
+            return RedirectToAction("Admin", "Home");
         }
 
     }
