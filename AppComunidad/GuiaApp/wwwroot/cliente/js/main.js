@@ -39,6 +39,11 @@
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
+    $('.banner').each(function () {
+        var bg = "https://localhost:44358/cliente/img/hero/banner.jpg"
+        $(this).css('background-image', 'url(' + bg + ')');
+    });
+
     //Humberger Menu
     $(".humberger__open").on('click', function () {
         $(".humberger__menu__wrapper").addClass("show__humberger__menu__wrapper");
