@@ -118,3 +118,5 @@ C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Home\Admin.cshtml.g.cs
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Negocios\Index.cshtml.g.cs
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\GuiaApp.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Menu\Index.cshtml.g.cs
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Menu\Create.cshtml.g.cs
