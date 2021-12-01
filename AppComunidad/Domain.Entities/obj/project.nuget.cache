@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "nN6VNpo/rO1w9TGBCA6BfUY+0/IPdFbgHYTD8F4N6xfDFA43PaV2+BZxGI5Kd9+QoTd5AAmQzh60LI6kr4MQeg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\DSD\\DSDTrabajoFinal\\AppComunidad\\Domain.Entities\\Domain.Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuario\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512"
+  ],
+  "logs": []
+}

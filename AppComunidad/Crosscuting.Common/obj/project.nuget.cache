@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "eiixFZAMAzE9UEqeyIy9kED4Pn59MgEmyTxH1eWcxm58zDkxHlq/JyeU1a4tyDvdWDbncXgh/+tyDnO9K+eXaA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\DSD\\DSDTrabajoFinal\\AppComunidad\\Crosscuting.Common\\Crosscuting.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuario\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512"
+  ],
+  "logs": []
+}

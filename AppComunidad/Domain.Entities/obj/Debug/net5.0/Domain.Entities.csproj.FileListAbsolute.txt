@@ -1,0 +1,11 @@
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Domain.Entities\bin\Debug\net5.0\Domain.Entities.deps.json
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Domain.Entities\bin\Debug\net5.0\Domain.Entities.dll
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Domain.Entities\bin\Debug\net5.0\ref\Domain.Entities.dll
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Domain.Entities\bin\Debug\net5.0\Domain.Entities.pdb
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Domain.Entities\obj\Debug\net5.0\Domain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Domain.Entities\obj\Debug\net5.0\Domain.Entities.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Domain.Entities\obj\Debug\net5.0\Domain.Entities.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Domain.Entities\obj\Debug\net5.0\Domain.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Domain.Entities\obj\Debug\net5.0\Domain.Entities.dll
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Domain.Entities\obj\Debug\net5.0\ref\Domain.Entities.dll
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Domain.Entities\obj\Debug\net5.0\Domain.Entities.pdb

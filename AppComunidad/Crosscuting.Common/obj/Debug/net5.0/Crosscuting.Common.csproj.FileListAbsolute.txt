@@ -1,0 +1,11 @@
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\bin\Debug\net5.0\Crosscuting.Common.deps.json
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\bin\Debug\net5.0\Crosscuting.Common.dll
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\bin\Debug\net5.0\ref\Crosscuting.Common.dll
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\bin\Debug\net5.0\Crosscuting.Common.pdb
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj\Debug\net5.0\Crosscuting.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj\Debug\net5.0\Crosscuting.Common.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj\Debug\net5.0\Crosscuting.Common.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj\Debug\net5.0\Crosscuting.Common.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj\Debug\net5.0\Crosscuting.Common.dll
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj\Debug\net5.0\ref\Crosscuting.Common.dll
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj\Debug\net5.0\Crosscuting.Common.pdb
