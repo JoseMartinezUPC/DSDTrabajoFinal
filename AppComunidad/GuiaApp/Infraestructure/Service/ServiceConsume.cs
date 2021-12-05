@@ -102,10 +102,10 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
             switch (servicio)
             {
                 case 1:
-                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    response = await client.PostAsync($"{_serviceURLGuia}{route}", content);
                     break;
                 case 2:
-                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    response = await client.PostAsync($"{_serviceURLManagement}{route}", content);
                     break;
             }
 
@@ -129,10 +129,10 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
             switch (servicio)
             {
                 case 1:
-                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    response = await client.PostAsync($"{_serviceURLGuia}{route}", content);
                     break;
                 case 2:
-                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    response = await client.PostAsync($"{_serviceURLManagement}{route}", content);
                     break;
             }
 
@@ -157,10 +157,10 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
             switch (servicio)
             {
                 case 1:
-                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    response = await client.PutAsync($"{_serviceURLGuia}{route}", content);
                     break;
                 case 2:
-                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    response = await client.PutAsync($"{_serviceURLManagement}{route}", content);
                     break;
             }
 
@@ -179,10 +179,10 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
             switch (servicio)
             {
                 case 1:
-                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    response = await client.DeleteAsync($"{_serviceURLGuia}{route}");
                     break;
                 case 2:
-                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    response = await client.DeleteAsync($"{_serviceURLManagement}{route}");
                     break;
             }
 
@@ -215,10 +215,10 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
             switch (servicio)
             {
                 case 1:
-                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    response = await client.PostAsync($"{_serviceURLGuia}{route}", multiContent);
                     break;
                 case 2:
-                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    response = await client.PostAsync($"{_serviceURLManagement}{route}", multiContent);
                     break;
             }
 
