@@ -9,4 +9,3 @@ C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj\Debug\net5.0\Crosscuting.Common.dll
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj\Debug\net5.0\ref\Crosscuting.Common.dll
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj\Debug\net5.0\Crosscuting.Common.pdb
-C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Common\obj\Debug\net5.0\Crosscuting.Common.csproj.AssemblyReference.cache

@@ -16,6 +16,7 @@ namespace Domain.Entities
         public int TipoDocumentoId { get; set; }
         public string NroDocumento { get; set; }
         public int TipoUsuarioId { get; set; }
+        public string Correo { get; set; }
 
     }
 }

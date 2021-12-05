@@ -1,4 +1,4 @@
-using AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service;
+using GuiaApp.Infraestructure.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,7 +27,8 @@ namespace GuiaApp
             services.Configure<AppSettings>(Configuration);
             services.AddHttpContextAccessor();
             services.AddHttpClient();
-            services.AddTransient<IServiceConsume, ServiceConsume>();
+            services.AddTransient<IGuiaServiceConsume, GuiaServiceConsume>();
+            services.AddTransient<IManagementServiceConsume, ManagementServiceConsume>();
             services.AddControllersWithViews();
         }
 

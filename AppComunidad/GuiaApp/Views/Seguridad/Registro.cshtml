@@ -49,14 +49,24 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="form-group">
-                    <label asp-for="TipoUsuarioId" class="control-label" style="font-size: 12px !important; color: #7fad39 !important; font-weight: 600 !important; "></label>
-                    <input asp-for="TipoUsuarioId" class="form-control" />
-                    <span asp-validation-for="TipoUsuarioId" class="text-danger"></span>
+                    <div class="row">
+                        <label asp-for="TipoUsuarioId" class="control-label" style="font-size: 12px !important; color: #7fad39 !important; font-weight: 600 !important; "></label>
+                    </div>
+                    <div class="row">
+                        <select class="form-control" asp-for="TipoUsuarioId" asp-items="@(new SelectList(ViewBag.ListaUsuarios,"Id","Descripcion"))">
+                            <option value="">Seleccione..</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <span asp-validation-for="TipoUsuarioId" class="text-danger"></span>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="form-group">
-
+                    <label asp-for="Correo" class="control-label" style="font-size: 12px !important; color: #7fad39 !important; font-weight: 600 !important; "></label>
+                    <input asp-for="Correo" class="form-control" />
+                    <span asp-validation-for="Correo" class="text-danger"></span>
                 </div>
             </div>
             <div class="col-lg-3">

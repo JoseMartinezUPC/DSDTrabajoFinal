@@ -32,5 +32,10 @@ namespace GuiaApp.Models
         [Required(ErrorMessage = "Debe seleccionar un Tipo de Usuario.")]
         public int TipoUsuarioId { get; set; }
 
+        [Display(Name = "Email")]
+        [StringLength(50, ErrorMessage = "Longitud entre 1 y 50 caracteres.", MinimumLength = 1)]
+        [RegularExpression(@"^(([a-z_\-A-Z0-9]+(\.[a-z_\-A-Z0-9]+)*)|("".+""))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$", ErrorMessage = "No debe ingresar un formato válido de correo")]
+        public string Correo { get; set; }
+
     }
 }

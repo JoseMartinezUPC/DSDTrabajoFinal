@@ -1,4 +1,4 @@
-﻿using AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service;
+﻿using GuiaApp.Infraestructure.Service;
 using GuiaApp.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,9 +11,9 @@ namespace GuiaApp.Controllers
 {
     public class MenuController : Controller
     {
-        private readonly IServiceConsume _serviceConsume;
+        private readonly IManagementServiceConsume _serviceConsume;
 
-        public MenuController(IServiceConsume serviceConsume)
+        public MenuController(IManagementServiceConsume serviceConsume)
         {
             _serviceConsume = serviceConsume;
         }
@@ -40,7 +40,7 @@ namespace GuiaApp.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var response = await _serviceConsume.PostAsync($"Menu", menu,2);
+                    var response = await _serviceConsume.PostAsync($"Menu", menu);
                     if (response.Success)
                     {
                         return RedirectToAction(nameof(Index));
@@ -62,7 +62,7 @@ namespace GuiaApp.Controllers
         {
             IEnumerable<MenuModel> listPadres = await ListarMenuPadres();
             ViewBag.ListaPadres = listPadres;
-            var response = await _serviceConsume.GetAsync<MenuModel>($"Menu/{id}",2, null);
+            var response = await _serviceConsume.GetAsync<MenuModel>($"Menu/{id}", null);
             if (response.Success)
             {
                
@@ -80,7 +80,7 @@ namespace GuiaApp.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var response = await _serviceConsume.PutAsync($"Menu", menu,2);
+                    var response = await _serviceConsume.PutAsync($"Menu", menu);
                     if (response.Success)
                     {
                         return RedirectToAction(nameof(Index));
@@ -103,7 +103,7 @@ namespace GuiaApp.Controllers
             try
             {
 
-                var response = await _serviceConsume.DeleteAsync($"Menu?id={id}",2);
+                var response = await _serviceConsume.DeleteAsync($"Menu?id={id}");
                 return Json(response.Result);
             }
             catch (Exception ex)
@@ -115,7 +115,7 @@ namespace GuiaApp.Controllers
         [HttpGet]
         public async Task<JsonResult> Pagination(MenuFilter filter)
         {
-            var response = await _serviceConsume.GetAsync<MenuPagination>($"Menu/Pagination?Start={filter.Start}&Rows={filter.Length}&Draw={filter.Draw}",2, null);
+            var response = await _serviceConsume.GetAsync<MenuPagination>($"Menu/Pagination?Start={filter.Start}&Rows={filter.Length}&Draw={filter.Draw}", null);
             if (response.Success)
             {
                 response.Result.Draw = filter.Draw;
@@ -127,7 +127,7 @@ namespace GuiaApp.Controllers
 
         public async Task<IEnumerable<MenuModel>> ListarMenuPadres()
         {
-            var response = await _serviceConsume.GetAsync<IEnumerable<MenuModel>>("Menu",2, null);
+            var response = await _serviceConsume.GetAsync<IEnumerable<MenuModel>>("Menu", null);
             if (response.Success)
             {
                 return response.Result.Where(a => a.Padre == 0).OrderBy(m => m.Nombre).ToList();
