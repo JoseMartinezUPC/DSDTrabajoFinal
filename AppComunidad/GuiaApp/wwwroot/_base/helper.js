@@ -363,7 +363,7 @@ window.chartColors = [
     loading = function (action) {
         if (action) {
             $.blockUI({
-                message: '<img src="/img/creuza.gif" width="120" />',
+                message: '<img src="/img/loading.gif" width="120" />',
                 centerY: 0,
                 css: {
                     width: '175px',

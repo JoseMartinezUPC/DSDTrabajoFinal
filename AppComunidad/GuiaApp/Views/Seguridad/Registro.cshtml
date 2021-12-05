@@ -1,0 +1,82 @@
+﻿@model GuiaApp.Models.UsuarioModel
+
+@{
+    ViewData["Title"] = "Registro";
+    Layout = "~/Views/Shared/_LayoutClienteAdd.cshtml";
+}
+
+
+
+<div class="col-lg-12">
+    <form asp-action="Registro">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label asp-for="Nombre" class="control-label" style="font-size: 12px !important; color: #7fad39 !important; font-weight: 600 !important;"></label>
+                    <input asp-for="Nombre" class="form-control" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label asp-for="Apellido" class="control-label" style="font-size: 12px !important; color: #7fad39 !important; font-weight: 600 !important; "></label>
+                    <input asp-for="Apellido" class="form-control" />
+                    <span asp-validation-for="Apellido" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="row">
+                    <label asp-for="TipoDocumentoId" class="control-label" style="font-size: 12px !important; color: #7fad39 !important; font-weight: 600 !important; "></label>
+                </div>
+                <div class="row">
+                    <select class="form-control" asp-for="TipoDocumentoId" asp-items="@(new SelectList(ViewBag.ListaDocumentos,"Id","Descripcion"))">
+                        <option value="">Seleccione..</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <span asp-validation-for="TipoDocumentoId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label asp-for="NroDocumento" class="control-label" style="font-size: 12px !important; color: #7fad39 !important; font-weight: 600 !important; "></label>
+                    <input asp-for="NroDocumento" class="form-control" />
+                    <span asp-validation-for="NroDocumento" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <label asp-for="TipoUsuarioId" class="control-label" style="font-size: 12px !important; color: #7fad39 !important; font-weight: 600 !important; "></label>
+                    <input asp-for="TipoUsuarioId" class="form-control" />
+                    <span asp-validation-for="TipoUsuarioId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <button class="btn btn-success" style="background-color: #7fad39 !important; border-color: #7fad39 !important; "><i class="btn-text">Registrar Usuario &nbsp;&nbsp;</i><i class="fa fa-save"></i></button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

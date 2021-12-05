@@ -46,7 +46,9 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label asp-for="Padre" class="control-label"></label>
-                        <input asp-for="Padre" class="form-control" />
+                        <select class="form-control" asp-for="Padre" asp-items="@(new SelectList(ViewBag.ListaPadres,"Id","Nombre"))">
+                            <option value=0>Seleccione..</option>
+                        </select>
                         <span asp-validation-for="Padre" class="text-danger"></span>
                     </div>
                 </div>
@@ -75,4 +77,13 @@
         </form>
     </div>
 </div>
+
+
+@section Scripts {
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        $('select').select2();
+    });
+    </script>
+}
 

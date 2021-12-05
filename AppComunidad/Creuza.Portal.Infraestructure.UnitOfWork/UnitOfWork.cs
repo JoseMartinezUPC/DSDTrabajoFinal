@@ -5,10 +5,15 @@ namespace Infraestructure.UnitOfWork
     public class UnitOfWork : IUnitOfWork
     {
         public IMenuRepository MenuRepository { get; private set; }
-       
+        public ITipoDocumentoRepository TipoDocumentoRepository { get; private set; }
+
+        public ITipoUsuarioRepository TipoUsuarioRepository { get; private set; }
+
         public UnitOfWork(string connectionString)
         {
-            MenuRepository = new MenuRepository(connectionString);           
+            MenuRepository = new MenuRepository(connectionString);
+            TipoDocumentoRepository = new TipoDocumentoRepository(connectionString);
+            TipoUsuarioRepository = new TipoUsuarioRepository(connectionString);
         }
     }
 }

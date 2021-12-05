@@ -108,17 +108,11 @@
                                 <a href="https://api.whatsapp.com/send/?phone=51952683889&text=Hola%2C+para+unirte+a+la+Guia+de+Bienes+y+Servicios%2C+dejanos+un+mensaje"><i class="fa fa-whatsapp"></i></a>
                                 <a href="tel:+51952683889"><i class="fa fa-phone"></i></a>
                             </div>
-                            @*<div class="header__top__right__language">
-                                    <img src="~/cliente/img/language.png" alt="">
-                                    <div>English</div>
-                                    <span class="arrow_carrot-down"></span>
-                                    <ul>
-                                        <li><a href="#">Spanis</a></li>
-                                        <li><a href="#">English</a></li>
-                                    </ul>
-                                </div>*@
+                            <div class="header__top__right__language">
+                                <a asp-controller="Seguridad" asp-action="Login"><i class="fa fa-lock"></i> Login</a>
+                            </div>
                             <div class="header__top__right__auth">
-                                <a asp-controller="Seguridad" asp-action="Login"><i class="fa fa-user"></i> Login</a>
+                                <a asp-controller="Seguridad" asp-action="Registro"><i class="fa fa-user"></i> Registrate</a>
                             </div>
                         </div>
                     </div>
@@ -129,7 +123,7 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a asp-controller="Home"asp-action="Cliente"><img src="~/cliente/img/logoGuiaAPP.png" alt=""></a>
+                        <a asp-controller="Home" asp-action="Cliente"><img src="~/cliente/img/logoGuiaAPP.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -178,7 +172,7 @@
                             <span>PARA TI</span>
                         </div>
                         <ul>
-                            <li><a asp-controller="Negocios" asp-action="Index" >Negocios</a></li>
+                            <li><a asp-controller="Negocios" asp-action="Index">Negocios</a></li>
                             <li><a asp-controller="" asp-action="">Servicios</a></li>
                         </ul>
                     </div>
@@ -186,15 +180,15 @@
                 <div class="col-lg-9">
                     <div class="hero__search">
                         @*<div class="hero__search__form">
-                            <form action="#">
-                                <div class="hero__search__categories">
-                                    TODAS LAS CATEGORIAS
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
-                                <input type="text" placeholder="¿Que Necesitas?">
-                                <button type="submit" class="site-btn">BUSCAR</button>
-                            </form>
-                        </div>*@
+                                <form action="#">
+                                    <div class="hero__search__categories">
+                                        TODAS LAS CATEGORIAS
+                                        <span class="arrow_carrot-down"></span>
+                                    </div>
+                                    <input type="text" placeholder="¿Que Necesitas?">
+                                    <button type="submit" class="site-btn">BUSCAR</button>
+                                </form>
+                            </div>*@
                         <div class="hero__search__phone">
                             <div class="hero__search__phone__icon" onclick="window.location.href = 'https://api.whatsapp.com/send/?phone=51952683889&text=Hola%2C+para+unirte+a+la+Guia+de+Bienes+y+Servicios%2C+dejanos+un+mensaje';">
                                 <i class="fa fa-whatsapp"></i>
@@ -252,9 +246,9 @@
             </div>
         </section>*@
 
-<section class="featured spad">
-    @RenderBody()
-</section>
+    <section class="featured spad">
+        @RenderBody()
+    </section>
 
     @*<div class="banner">
             <div class="container">
@@ -576,14 +570,14 @@
                         @*<p>Get E-mail updates about our latest shop and special offers.</p>*@
                         <p></p>
                         @*<form action="#">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit" class="site-btn">Subscribe</button>
-                        </form>*@
-                    <div class="footer__widget__social">
-                        <a href="https://www.facebook.com/ClubAugustSB"><i class="fa fa-facebook"></i></a>
-                        <a href="https://api.whatsapp.com/send/?phone=51952683889&text=Hola%2C+para+unirte+a+la+Guia+de+Bienes+y+Servicios%2C+dejanos+un+mensaje"><i class="fa fa-whatsapp"></i></a>
-                        <a href="tel:+51952683889"><i class="fa fa-phone"></i></a>
-                    </div>
+                                <input type="text" placeholder="Enter your mail">
+                                <button type="submit" class="site-btn">Subscribe</button>
+                            </form>*@
+                        <div class="footer__widget__social">
+                            <a href="https://www.facebook.com/ClubAugustSB"><i class="fa fa-facebook"></i></a>
+                            <a href="https://api.whatsapp.com/send/?phone=51952683889&text=Hola%2C+para+unirte+a+la+Guia+de+Bienes+y+Servicios%2C+dejanos+un+mensaje"><i class="fa fa-whatsapp"></i></a>
+                            <a href="tel:+51952683889"><i class="fa fa-phone"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>

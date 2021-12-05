@@ -12,7 +12,8 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "GUIA_SERVICE": "https://localhost:44366/api/",
+        "GUIA_SERVICE": "https://localhost:44355/api/",
+        "MANAGEMENT_SERVICE": "https://localhost:44366/api/",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },

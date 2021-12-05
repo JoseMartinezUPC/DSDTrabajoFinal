@@ -21,6 +21,7 @@ namespace ManagementMicroService.Controllers
         {
             _unitOfWork = unitOfWork;
         }
+
         [Consumes(MediaTypeNames.Application.Json)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
@@ -30,6 +31,7 @@ namespace ManagementMicroService.Controllers
             var result = await _unitOfWork.MenuRepository.GetAll();
             return Ok(result);
         }
+
         [Consumes(MediaTypeNames.Application.Json)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]

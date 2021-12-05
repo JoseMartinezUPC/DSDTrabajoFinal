@@ -22,7 +22,8 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IEnumerable<string> _Scopes;
 
-        private readonly string _serviceURL;
+        private readonly string _serviceURLGuia;
+        private readonly string _serviceURLManagement;
         private readonly JsonSerializerSettings _serializerSettings;
 
         public ServiceConsume(IHttpClientFactory httpClientFactory, IHttpContextAccessor httpContextAccessor, IOptions<AppSettings> settings)
@@ -37,34 +38,55 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
                 DateTimeZoneHandling = DateTimeZoneHandling.Utc,
                 NullValueHandling = NullValueHandling.Ignore
             };            
-            _serviceURL = Environment.GetEnvironmentVariable("GUIA_SERVICE");
+            _serviceURLGuia = Environment.GetEnvironmentVariable("GUIA_SERVICE");
+            _serviceURLManagement = Environment.GetEnvironmentVariable("MANAGEMENT_SERVICE");
         }
-        public async Task<ReponseResult<TResult>> GetAsync<TResult>(string route, string accessToken = null)
+        public async Task<ReponseResult<TResult>> GetAsync<TResult>(string route, int servicio, string accessToken = null)
         {
 
             var client = _httpClientFactory.CreateClient();
 
-            var response = await client.GetAsync($"{_serviceURL}{route}");
+            var response = new HttpResponseMessage();
+
+            switch (servicio)
+            {
+                case 1:
+                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    break;
+                case 2:
+                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    break;
+            }            
 
             var result = await HandleResponse<TResult>(response);
 
             return result;
         }
 
-        public async Task<ReponseResult<Stream>> GetFileAsync(string route)
+        public async Task<ReponseResult<Stream>> GetFileAsync(string route, int servicio)
         {
            var client = _httpClientFactory.CreateClient();
 
             client.Timeout = new TimeSpan(0, 10, 0);
 
-            var response = await client.GetAsync($"{_serviceURL}{route}");
+            var response = new HttpResponseMessage();
+
+            switch (servicio)
+            {
+                case 1:
+                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    break;
+                case 2:
+                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    break;
+            }
 
             var result = await HandleResponse<Stream>(response);
 
             return result;
         }
 
-        public async Task<ReponseResult<Stream>> GetFileWithHiddenAsync(string route,int[] listhidden)
+        public async Task<ReponseResult<Stream>> GetFileWithHiddenAsync(string route,int[] listhidden, int servicio)
         {
 
             var content = new StringContent(JsonConvert.SerializeObject(listhidden));
@@ -75,14 +97,24 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
 
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var response = await client.PostAsync($"{_serviceURL}{route}", content);
+            var response = new HttpResponseMessage();
+
+            switch (servicio)
+            {
+                case 1:
+                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    break;
+                case 2:
+                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    break;
+            }
 
             var result = await HandleResponse<Stream>(response);
 
             return result;
         }
 
-        public async Task<ReponseResult<int>> PostAsync<TInput>(string route, TInput data)
+        public async Task<ReponseResult<int>> PostAsync<TInput>(string route, TInput data, int servicio)
         {
             var content = new StringContent(JsonConvert.SerializeObject(data));
 
@@ -92,14 +124,24 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
 
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var response = await client.PostAsync($"{_serviceURL}{route}", content);
+            var response = new HttpResponseMessage();
+
+            switch (servicio)
+            {
+                case 1:
+                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    break;
+                case 2:
+                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    break;
+            }
 
             var result = await HandleResponse<int>(response);
 
             return result;
         }
 
-        public async Task<ReponseResult<bool>> PutAsync<TInput>(string route, TInput data)
+        public async Task<ReponseResult<bool>> PutAsync<TInput>(string route, TInput data, int servicio)
         {
 
             var content = new StringContent(JsonConvert.SerializeObject(data));
@@ -110,26 +152,46 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
 
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var response = await client.PutAsync($"{_serviceURL}{route}", content);
+            var response = new HttpResponseMessage();
+
+            switch (servicio)
+            {
+                case 1:
+                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    break;
+                case 2:
+                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    break;
+            }
 
             var result = await HandleResponse<bool>(response);
 
             return result;
         }
 
-        public async Task<ReponseResult<bool>> DeleteAsync(string route)
+        public async Task<ReponseResult<bool>> DeleteAsync(string route, int servicio)
         {
 
             var client = _httpClientFactory.CreateClient();
 
-            var response = await client.DeleteAsync($"{_serviceURL}{route}");
+            var response = new HttpResponseMessage();
+
+            switch (servicio)
+            {
+                case 1:
+                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    break;
+                case 2:
+                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    break;
+            }
 
             var result = await HandleResponse<bool>(response);
 
             return result;
         }
 
-        public async Task<ReponseResult<bool>> PostFileAsync(string route, object value)
+        public async Task<ReponseResult<bool>> PostFileAsync(string route, object value, int servicio)
         {
 
             IFormFile file = value as IFormFile;
@@ -148,7 +210,17 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
 
             var client = _httpClientFactory.CreateClient();
 
-            var response = await client.PostAsync($"{_serviceURL}{route}", multiContent);
+            var response = new HttpResponseMessage();
+
+            switch (servicio)
+            {
+                case 1:
+                    response = await client.GetAsync($"{_serviceURLGuia}{route}");
+                    break;
+                case 2:
+                    response = await client.GetAsync($"{_serviceURLManagement}{route}");
+                    break;
+            }
 
             var result = await HandleResponse<bool>(response);
 

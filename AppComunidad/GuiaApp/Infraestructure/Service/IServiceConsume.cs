@@ -6,12 +6,12 @@ namespace AppComunidad.Aplicativos.GuiaApp.Infraestructure.Service
 {
     public interface IServiceConsume
     {
-        Task<ReponseResult<TResult>> GetAsync<TResult>(string route, string accessToken = null);
-        Task<ReponseResult<Stream>> GetFileAsync(string route);
-        Task<ReponseResult<Stream>> GetFileWithHiddenAsync(string route, int[] listhidden);
-        Task<ReponseResult<int>> PostAsync<TInput>(string route, TInput data);
-        Task<ReponseResult<bool>> PutAsync<TInput>(string route, TInput data);
-        Task<ReponseResult<bool>> DeleteAsync(string route);
-        Task<ReponseResult<bool>> PostFileAsync(string route, object file);
+        Task<ReponseResult<TResult>> GetAsync<TResult>(string route, int servicio, string accessToken = null);
+        Task<ReponseResult<Stream>> GetFileAsync(string route, int servicio);
+        Task<ReponseResult<Stream>> GetFileWithHiddenAsync(string route, int[] listhidden, int servicio);
+        Task<ReponseResult<int>> PostAsync<TInput>(string route, TInput data, int servicio);
+        Task<ReponseResult<bool>> PutAsync<TInput>(string route, TInput data, int servicio);
+        Task<ReponseResult<bool>> DeleteAsync(string route, int servicio);
+        Task<ReponseResult<bool>> PostFileAsync(string route, object file, int servicio);
     }
 }

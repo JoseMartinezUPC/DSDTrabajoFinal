@@ -38,7 +38,6 @@ C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\ManagementMicroService
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\ManagementMicroService\obj\Debug\net5.0\ManagementMicroService.AssemblyInfoInputs.cache
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\ManagementMicroService\obj\Debug\net5.0\ManagementMicroService.AssemblyInfo.cs
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\ManagementMicroService\obj\Debug\net5.0\ManagementMicroService.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\ManagementMicroService\obj\Debug\net5.0\ManagementMicroService.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\ManagementMicroService\obj\Debug\net5.0\ManagementMicroService.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\ManagementMicroService\obj\Debug\net5.0\staticwebassets\ManagementMicroService.StaticWebAssets.Manifest.cache
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\ManagementMicroService\obj\Debug\net5.0\staticwebassets\ManagementMicroService.StaticWebAssets.xml
