@@ -1,4 +1,5 @@
-﻿using GuiaApp.Infraestructure.Service;
+﻿using GuiaApp.Helper;
+using GuiaApp.Infraestructure.Service;
 using GuiaApp.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +13,12 @@ namespace GuiaApp.Controllers
     public class SeguridadController : Controller
     {
         private readonly IGuiaServiceConsume _serviceConsume;
+        private readonly IManagementServiceConsume _serviceConsumeM;
 
-        public SeguridadController(IGuiaServiceConsume serviceConsume)
+        public SeguridadController(IGuiaServiceConsume serviceConsume,IManagementServiceConsume serviceConsumeM)
         {
             _serviceConsume = serviceConsume;
+            _serviceConsumeM = serviceConsumeM;
         }
 
         // GET: SeguridadController
@@ -24,9 +27,30 @@ namespace GuiaApp.Controllers
             return View();
         }
 
-        public ActionResult Ingresar(string usuario,string password)
+        public async Task<IActionResult> Ingresar(LoginModel login)
         {
-            return RedirectToAction("Admin", "Home");
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var response = await _serviceConsumeM.GetAsync<UsuarioModel>($"Usuario/Acceso?Login={login.usuario}&Password={login.password}", null);
+                    if (response.Result.Acceso)
+                    {
+                        return RedirectToAction("Admin", "Home");
+                    }
+                    else 
+                    {
+                        ViewBag.Message = "Revise sus Credenciales";
+                        ViewData["Message"] = "Revise sus Credenciales";
+                        return View("Login");
+                    }
+                }
+                return View("Login");
+            }
+            catch (Exception)
+            {
+                return View();
+            }            
         }
 
         public async Task<IActionResult> Registro()
@@ -50,7 +74,9 @@ namespace GuiaApp.Controllers
                     var response = await _serviceConsume.PostAsync($"Usuario", usuario);
                     if (response.Success)
                     {
-                        return RedirectToAction(nameof(Index));
+                        var response2 =  await _serviceConsume.GetAsync<UsuarioModel>($"Usuario/{response.Result}", null);
+                        HttpContext.Session.SetString("CorreoUsuario", response2.Result.Correo);
+                        return RedirectToAction("Mensaje", "Cliente");
                     }
 
                 }
@@ -86,5 +112,6 @@ namespace GuiaApp.Controllers
             }
             return new List<TipoUsuarioModel>();
         }
+
     }
 }

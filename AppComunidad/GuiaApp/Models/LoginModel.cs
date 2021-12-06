@@ -8,10 +8,12 @@ namespace GuiaApp.Models
 {
     public class LoginModel
     {
-        [Required]
+        [Display(Name = "Usuario ")]
+        [Required(ErrorMessage = "Debe un Usuario.")]
         public string usuario { get; set; }
 
-        [Required]
+        [Display(Name = "Contraseña")]
+        [Required(ErrorMessage = "Debe ingresar el Password.")]
         public string password { get; set; }
     }
 }

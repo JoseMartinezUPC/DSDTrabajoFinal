@@ -20,6 +20,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/login/css/bootstrap.min.css">
 
+    <link href="~/lib/toast/css/jquery.toast.css" rel="stylesheet" />
+
     <!-- Style -->
     <link rel="stylesheet" href="~/login/css/style.css">
 
@@ -43,15 +45,24 @@
                                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                                 <div class="form-group first">
                                     <label asp-for="usuario" class="control-label">Usuario</label>
-                                    <input asp-for="usuario" class="form-control" type="text"/>
-                                    <span asp-validation-for="usuario" class="text-danger"></span>
+                                    <input asp-for="usuario" class="form-control" type="text" autocomplete="off"/>
+
                                 </div>
                                 <div class="form-group last mb-4">
 
                                     <label asp-for="password" class="control-label">Password</label>
-                                    <input asp-for="password" class="form-control" type="password" />
-                                    <span asp-validation-for="password" class="text-danger"></span>
+                                    <input asp-for="password" class="form-control" type="password"  autocomplete="off"/>
 
+
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <span asp-validation-for="usuario" class="text-danger"></span>
+                                    </div>
+                                    <div class="row">
+                                        <span asp-validation-for="password" class="text-danger"></span>
+                                    </div>
                                 </div>
 
                                 @*<div class="d-flex mb-5 align-items-center">
@@ -93,5 +104,25 @@
     <script src="~/login/js/popper.min.js"></script>
     <script src="~/login/js/bootstrap.min.js"></script>
     <script src="~/login/js/main.js"></script>
+    <script src="~/lib/toast/js/jquery.toast.js"></script>
+
+    @if (ViewData["Message"] != null)
+    {
+        var mensaje = ViewData["Message"].ToString();
+        @if (mensaje != "")
+        {
+            <script type="text/javascript">
+                $.toast({
+                    heading: 'Credenciales de Acceso',
+                    text: 'Revise sus Credenciales',
+                    showHideTransition: 'slide',
+                    icon: 'warning'
+                });
+            </script>
+            ViewBag.Message = false;
+        }
+
+    }
+
 </body>
 </html>
