@@ -9,5 +9,6 @@ namespace Infraestructure.UnitOfWork
         ITipoDocumentoRepository TipoDocumentoRepository { get; }
         ITipoUsuarioRepository TipoUsuarioRepository { get; }
         IUsuarioRepository UsuarioRepository { get; }
+        ICategoriaRepository CategoriaRepository { get; }
     }
 }

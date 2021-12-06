@@ -20,7 +20,7 @@
                         <li class="active" data-filter="*">Todas</li>
                         @foreach (var item in Model.categorias)
                         {
-                            <li data-filter="@item.CategoriaFilter">@item.CategoriaNombre</li>
+                            <li data-filter="@item.Filter">@item.Nombre</li>
                         }
                     </ul>
                 </div>

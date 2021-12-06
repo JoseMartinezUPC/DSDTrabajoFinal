@@ -28,9 +28,11 @@ namespace Infraestructure.Repository
                 param.Add("@Login", filter.Login, DbType.String);
                 param.Add("@Password", filter.Password, DbType.String);
                 param.Add("@Resultado", 1, DbType.Boolean, ParameterDirection.InputOutput);
+                param.Add("@Id", 1, DbType.Int32, ParameterDirection.InputOutput);
 
                 await connection.QueryAsync<UsuarioViewModel>(@"[dbo].[Usp_Get_Usuario_Acceso]", param, commandType: CommandType.StoredProcedure);
                 usuario.Acceso = param.Get<Boolean>("@Resultado");
+                usuario.Id = param.Get<Int32>("@Id");
             }
             return usuario;
         }

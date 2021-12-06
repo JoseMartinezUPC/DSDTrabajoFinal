@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crosscuting.Common", "Cross
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crosscuting.Messages", "Crosscuting.Messages\Crosscuting.Messages.csproj", "{4B3842C4-898D-4872-AA2C-9BC4FA0C9FCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiaMicroService", "GuiaMicroService\GuiaMicroService.csproj", "{56822A65-4649-43A0-ABDA-4852228EA24E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuiaMicroService", "GuiaMicroService\GuiaMicroService.csproj", "{56822A65-4649-43A0-ABDA-4852228EA24E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

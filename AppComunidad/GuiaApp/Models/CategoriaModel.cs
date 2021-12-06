@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace GuiaApp.Models
 {
-    public class CategoriaModel
+    public class CategoriaModel:AuditoriaModel
     {
-        public int CategoriaId { get; set; }
-        public string CategoriaNombre { get; set; }
-        public bool CategoriaEstado { get; set; }
-
-        public string CategoriaFilter { get; set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Filter { get; set; }
     }
 }

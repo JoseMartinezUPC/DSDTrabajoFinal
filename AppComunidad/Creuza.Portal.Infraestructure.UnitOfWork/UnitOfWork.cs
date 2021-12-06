@@ -9,6 +9,7 @@ namespace Infraestructure.UnitOfWork
 
         public ITipoUsuarioRepository TipoUsuarioRepository { get; private set; }
         public IUsuarioRepository UsuarioRepository { get; private set; }
+        public ICategoriaRepository CategoriaRepository { get; }
 
         public UnitOfWork(string connectionString)
         {
@@ -16,6 +17,7 @@ namespace Infraestructure.UnitOfWork
             TipoDocumentoRepository = new TipoDocumentoRepository(connectionString);
             TipoUsuarioRepository = new TipoUsuarioRepository(connectionString);
             UsuarioRepository = new UsuarioRepository(connectionString);
+            CategoriaRepository = new CategoriaRepository(connectionString);
         }
     }
 }

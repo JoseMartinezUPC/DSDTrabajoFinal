@@ -1,0 +1,158 @@
+﻿@model GuiaApp.Models.ModificarAsociadoModel
+
+@{
+    ViewData["Title"] = "Modificar";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h4>Informacion General</h4>
+            </div>
+            <div class="box-body">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="usuario.Nombre" class="control-label"></label>
+                                <input asp-for="usuario.Nombre" class="form-control" />
+                                <span asp-validation-for="usuario.Nombre" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="usuario.Apellido" class="control-label"></label>
+                                <input asp-for="usuario.Apellido" class="form-control" />
+                                <span asp-validation-for="usuario.Apellido" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="usuario.NroDocumento" class="control-label"></label>
+                                <input asp-for="usuario.NroDocumento" class="form-control" readonly />
+                                <span asp-validation-for="usuario.NroDocumento" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="usuario.TipoDocumentoId" class="control-label"></label>
+                                <select class="form-control" asp-for="usuario.TipoDocumentoId" asp-items="@(new SelectList(ViewBag.ListaDocumentos,"Id","Descripcion"))" disabled>
+                                    <option value="">Seleccione..</option>
+                                </select>
+                                <span asp-validation-for="usuario.TipoDocumentoId" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="usuario.Login" class="control-label"></label>
+                                <input asp-for="usuario.Login" class="form-control" readonly />
+                                <span asp-validation-for="usuario.Login" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label asp-for="usuario.Password" class="control-label"></label>
+                                <input asp-for="usuario.Password" class="form-control" />
+                                <span asp-validation-for="usuario.Password" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+                <div class="col-md-12">
+                    <div class="row">
+                        <button class="btn btn-primary pull-right"><i class="btn-text">Actualizar &nbsp;&nbsp;</i><i class="fa fa-save"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="box">
+            <div class="box-header with-border">
+                <h4>Imagenes del Negocio</h4>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-10">
+                    </div>
+                    <div class="col-md-12">
+                        <button class="btn btn-primary pull-right"><i class="btn-text">Agregar Imagen &nbsp;&nbsp;</i><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="box">
+            <div class="box-header with-border">
+                <h4>Informacion del Negocio</h4>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label asp-for="Descripcion" class="control-label"></label>
+                            <textarea asp-for="Descripcion" class="form-control" rows="5" style="resize:none;"></textarea>
+                            <span asp-validation-for="Descripcion" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label asp-for="CategoriaId" class="control-label"></label>
+                            <select class="form-control" asp-for="CategoriaId" asp-items="@(new SelectList(ViewBag.ListaCategorias,"Id","Nombre"))">
+                                <option value="">Seleccione..</option>
+                            </select>
+                            <span asp-validation-for="CategoriaId" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label asp-for="CategoriaId" class="control-label"></label>
+                            <select class="form-control" asp-for="CategoriaId" asp-items="@(new SelectList(ViewBag.ListaCategorias,"Id","Nombre"))">
+                                <option value="">Seleccione..</option>
+                            </select>
+                            <span asp-validation-for="CategoriaId" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="box">
+            <div class="box-header with-border">
+                <h4>Redes Sociales del Negocio</h4>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-10">
+                    </div>
+                    <div class="col-md-12">
+                        <button class="btn btn-primary pull-right"><i class="btn-text">Agregar Contacto &nbsp;&nbsp;</i><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer">
+            </div>
+        </div>
+    </div>
+</div>

@@ -36,6 +36,8 @@ namespace GuiaApp.Controllers
                     var response = await _serviceConsumeM.GetAsync<UsuarioModel>($"Usuario/Acceso?Login={login.usuario}&Password={login.password}", null);
                     if (response.Result.Acceso)
                     {
+                        var  usuario = response.Result;
+                        HttpContext.Session.SetObjectAsJson("Usuario", usuario);
                         return RedirectToAction("Admin", "Home");
                     }
                     else 

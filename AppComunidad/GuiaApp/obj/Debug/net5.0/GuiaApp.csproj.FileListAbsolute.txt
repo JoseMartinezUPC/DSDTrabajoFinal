@@ -125,3 +125,4 @@ C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Shared\_LayoutClienteAdd.cshtml.g.cs
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Shared\_LayoutClienteMensaje.cshtml.g.cs
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Cliente\Mensaje.cshtml.g.cs
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaApp\obj\Debug\net5.0\Razor\Views\Asociado\Modificar.cshtml.g.cs

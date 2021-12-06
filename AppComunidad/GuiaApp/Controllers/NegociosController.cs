@@ -1,4 +1,5 @@
-﻿using GuiaApp.Models;
+﻿using GuiaApp.Infraestructure.Service;
+using GuiaApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -12,7 +13,12 @@ namespace GuiaApp.Controllers
 {
     public class NegociosController : Controller
     {
-        string Baseurl = "https://localhost:44393/";
+        private readonly IGuiaServiceConsume _serviceConsume;
+        public NegociosController(IGuiaServiceConsume serviceConsume)
+        {
+            _serviceConsume = serviceConsume;
+        }
+
         public async Task<IActionResult> Index()
         {
             NegocioIndexModel negocioIndexModel = new NegocioIndexModel();
@@ -29,27 +35,8 @@ namespace GuiaApp.Controllers
 
         public async Task<IEnumerable<CategoriaModel>> GetCategoriasAll()
         {
-            List<CategoriaModel> categorias = new List<CategoriaModel>();
-            using (var client = new HttpClient())
-            {
-                //Passing service base url
-                client.BaseAddress = new Uri(Baseurl);
-                client.DefaultRequestHeaders.Clear();
-                //Define request data format
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                //Sending request to find web api REST service resource GetAllEmployees using HttpClient
-                HttpResponseMessage Res = await client.GetAsync("api/Categoria");
-                //Checking the response is successful or not which is sent using HttpClient
-                if (Res.IsSuccessStatusCode)
-                {
-                    //Storing the response details recieved from web api
-                    var CategoriasResponse = Res.Content.ReadAsStringAsync().Result;
-                    //Deserializing the response recieved from web api and storing into the Employee list
-                    categorias = JsonConvert.DeserializeObject<List<CategoriaModel>>(CategoriasResponse);
-                }
-                //returning the employee list to view
-                return categorias.OrderBy(x=> x.CategoriaNombre);
-            }
+            var response = await _serviceConsume.GetAsync<IEnumerable<CategoriaModel>>("Categoria");
+            return response.Result.OrderBy(x=>x.Nombre);
         }
     }
 }
