@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Infraestructure.Repository.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,6 @@ namespace Infraestructure.Repository
 {
     public interface ICategoriaRepository : IGenericRepository<Categoria>
     {
+        Task<CategoriaPaginationViewModel> GetPagination(CategoriaPaginationFilterViewModel filter);
     }
 }
