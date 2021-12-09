@@ -14,6 +14,8 @@ namespace Infraestructure.UnitOfWork
         public IImagenRepository ImagenRepository { get; private set; }
         public ITipoRedRepository TipoRedRepository { get; private set; }
         public IRedRepository RedRepository { get; private set; }
+        public INegocioRepository NegocioRepository { get; private set; }
+        public ISubCategoriaRepository SubCategoriaRepository { get; private set; }
 
         public UnitOfWork(string connectionString)
         {
@@ -26,6 +28,8 @@ namespace Infraestructure.UnitOfWork
             ImagenRepository = new ImagenRepository(connectionString);
             TipoRedRepository = new TipoRedRepository(connectionString);
             RedRepository = new RedRepository(connectionString);
+            NegocioRepository = new NegocioRepository(connectionString);
+            SubCategoriaRepository = new SubCategoriaRepository(connectionString);
         }
     }
 }

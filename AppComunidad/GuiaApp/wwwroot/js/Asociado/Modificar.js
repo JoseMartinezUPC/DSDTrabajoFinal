@@ -4,6 +4,9 @@
     var btnCancelarImagen = document.getElementById('btnCancelarImagen');
     var btnGuardarRed = document.getElementById('btnGuardarRed');
     var btnCancelarRed = document.getElementById('btnCancelarRed');
+    var btnActualizar = document.getElementById('btnActualizar');
+    var btnRegistrarNegocio = document.getElementById('btnRegistrarNegocio');
+    
 
     document.addEventListener("DOMContentLoaded", function () {
         paginationImagenes();
@@ -11,6 +14,8 @@
         //btnDowload.addEventListener('click', dowloadExcel);
         btnGuardarImagen.addEventListener('click', UploadImagen);
         btnGuardarRed.addEventListener('click', GuardarRed);
+        btnActualizar.addEventListener('click', ActualizarUsuario);
+        btnRegistrarNegocio.addEventListener('click', RegistrarNegocio);
     });
 
     $('body').on('click', '.btn-delete-Imagen', function () {
@@ -232,6 +237,89 @@
             $('#txtRecurso').val('');
             $('#ddlTipoRed').val("0");
         })
+    }
+
+    var ActualizarUsuario = function () {
+        var formData = new FormData();
+
+        formData.append('IdUsuario', $('#IdUsuario').val());
+        formData.append('Nombre', $('#txtUsuarioNombre').val());
+        formData.append('Apellido', $('#txtUsuarioApellido').val());
+        formData.append('Password', $('#txtUsuarioPassword').val());
+
+        $.ajax({
+            url: url.ActualizarUsuario,
+            type: 'POST',
+            async: true,
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                if (response) {
+                    if (response.estado) {
+                        $.toast({
+                            heading: '¡Exito!',
+                            text: response.message,
+                            showHideTransition: 'slide',
+                            icon: 'success'
+                        });
+                    }
+                    else {
+                        $.toast({
+                            heading: 'Error al Actualizar Datos',
+                            text: response.message,
+                            showHideTransition: 'slide',
+                            icon: 'error'
+                        });
+                    }
+                }
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+    }
+
+    var RegistrarNegocio = function ()
+    {
+        var formData = new FormData();
+
+        formData.append('IdUsuario', $('#IdUsuario').val());
+        formData.append('Descripcion', $('#txtDescripcion').val());
+        formData.append('CategoriaId', $('#ddlCategoria option:selected').val());
+        formData.append('SubCategoriaId', $('#ddlSubCategoria option:selected').val());
+
+        $.ajax({
+            url: url.RegistrarNegocio,
+            type: 'POST',
+            async: true,
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                if (response) {
+                    if (response.estado) {
+                        $.toast({
+                            heading: '¡Exito!',
+                            text: response.message,
+                            showHideTransition: 'slide',
+                            icon: 'success'
+                        });
+                    }
+                    else {
+                        $.toast({
+                            heading: 'Error al Actualizar Datos',
+                            text: response.message,
+                            showHideTransition: 'slide',
+                            icon: 'error'
+                        });
+                    }
+                }
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
     }
 
 })();

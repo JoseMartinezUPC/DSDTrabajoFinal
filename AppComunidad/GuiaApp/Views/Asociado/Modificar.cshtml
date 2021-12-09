@@ -19,14 +19,14 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label asp-for="Usuario.Nombre" class="control-label"></label>
-                                <input asp-for="Usuario.Nombre" class="form-control" />
+                                <input id="txtUsuarioNombre" asp-for="Usuario.Nombre" class="form-control" />
                                 <span asp-validation-for="Usuario.Nombre" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label asp-for="Usuario.Apellido" class="control-label"></label>
-                                <input asp-for="Usuario.Apellido" class="form-control" />
+                                <input id="txtUsuarioApellido" asp-for="Usuario.Apellido" class="form-control" />
                                 <span asp-validation-for="Usuario.Apellido" class="text-danger"></span>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label asp-for="Usuario.Password" class="control-label"></label>
-                                <input asp-for="Usuario.Password" class="form-control" />
+                                <input id="txtUsuarioPassword" asp-for="Usuario.Password" class="form-control" />
                                 <span asp-validation-for="Usuario.Password" class="text-danger"></span>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
             <div class="box-footer">
                 <div class="col-md-12">
                     <div class="row">
-                        <button class="btn btn-primary pull-right"><i class="btn-text">Actualizar &nbsp;&nbsp;</i><i class="fa fa-save"></i></button>
+                        <button id="btnActualizar" type="button" class="btn btn-primary pull-right"><i class="btn-text">Actualizar &nbsp;&nbsp;</i><i class="fa fa-save"></i></button>
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label asp-for="Descripcion" class="control-label"></label>
-                            <textarea asp-for="Descripcion" class="form-control" rows="5" style="resize:none;"></textarea>
+                            <textarea id="txtDescripcion" asp-for="Descripcion" class="form-control" rows="5" style="resize:none;"></textarea>
                             <span asp-validation-for="Descripcion" class="text-danger"></span>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label asp-for="CategoriaId" class="control-label"></label>
-                            <select class="form-control" asp-for="CategoriaId" asp-items="@(new SelectList(ViewBag.ListaCategorias,"Id","Nombre"))">
+                            <select id="ddlCategoria" class="form-control" asp-for="CategoriaId" asp-items="@(new SelectList(ViewBag.ListaCategorias,"Id","Nombre"))">
                                 <option value="">Seleccione..</option>
                             </select>
                             <span asp-validation-for="CategoriaId" class="text-danger"></span>
@@ -137,16 +137,17 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label asp-for="CategoriaId" class="control-label"></label>
-                            <select class="form-control" asp-for="CategoriaId" asp-items="@(new SelectList(ViewBag.ListaCategorias,"Id","Nombre"))">
+                            <label asp-for="SubCategoriaId" class="control-label"></label>
+                            <select id="ddlSubCategoria" class="form-control" asp-for="SubCategoriaId" asp-items="@(new SelectList(ViewBag.ListaSubCategorias,"Id","Nombre"))">
                                 <option value="">Seleccione..</option>
                             </select>
-                            <span asp-validation-for="CategoriaId" class="text-danger"></span>
+                            <span asp-validation-for="SubCategoriaId" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="box-footer">
+                <button id="btnRegistrarNegocio" type="button" class="btn btn-primary pull-right"><i class="btn-text">Actualizar &nbsp;&nbsp;</i><i class="fa fa-save"></i></button>
             </div>
         </div>
     </div>
@@ -264,6 +265,8 @@
         PaginationRed: '@Url.Action("PaginationRed", "Asociado")',
         UploadImagen: '@Url.Action("UploadImagen", "Asociado")',
         GuardarRed: '@Url.Action("GuardarRed", "Asociado")',
+        ActualizarUsuario: '@Url.Action("ActualizarUsuario", "Asociado")',
+        RegistrarNegocio: '@Url.Action("RegistrarNegocio", "Asociado")',
         DeleteImagen: '@Url.Action("DeleteImagen", "Asociado")',
         DeleteRed: '@Url.Action("DeleteRed", "Asociado")'
     };

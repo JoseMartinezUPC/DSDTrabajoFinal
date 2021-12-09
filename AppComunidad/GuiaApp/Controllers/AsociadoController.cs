@@ -27,11 +27,18 @@ namespace GuiaApp.Controllers
         public async Task<IActionResult> Modificar()
         {
             ModificarAsociadoModel asociadoModel = new ModificarAsociadoModel();
-            asociadoModel.Usuario = await ObtenerUsuario();
+            var usuario = await ObtenerUsuario();
+            asociadoModel.Usuario = usuario;
+            var Negocio = GetNegocio(usuario.Id).Result.FirstOrDefault();
+            asociadoModel.Descripcion = Negocio.Descripcion;
+            asociadoModel.CategoriaId = Negocio.CategoriaId;
+            asociadoModel.SubCategoriaId = Negocio.SubCategoriaId;
             IEnumerable<TipoDocumentoModel> listTipoDocumento = await ListarTipoDocumentos();
             ViewBag.ListaDocumentos = listTipoDocumento;
             IEnumerable<CategoriaModel> listCategorias = await GetCategoriasAll();
             ViewBag.ListaCategorias = listCategorias;
+            IEnumerable<SubCategoriaModel> listSubCategorias = await GetSubCategoriasAll();
+            ViewBag.ListaSubCategorias = listSubCategorias;
             IEnumerable<TipoImagenModel> listTipoImagenes = await ListarTipoImagenes();
             ViewBag.ListaTipoImagenes = listTipoImagenes;
             IEnumerable<TipoRedModel> listTipoRedes = await ListarTipoRedes();
@@ -94,7 +101,7 @@ namespace GuiaApp.Controllers
                     fileName = Path.Combine(_environment.WebRootPath, "Imagenes") + $@"\{newFileName}";
 
                     // if you want to store path of folder in database
-                    PathDB = "Imagenes/" + newFileName;                    
+                    PathDB = "Imagenes/" + newFileName;
 
                     imagen.Nombre = newFileName;
                     imagen.Ruta = PathDB;
@@ -112,7 +119,7 @@ namespace GuiaApp.Controllers
                     }
                     return Json(new ImagenJson { Message = "Se registro Correctamente", Estado = true });
                 }
-                else 
+                else
                 {
                     return Json(new ImagenJson { Message = "Error al Cargar Imagen", Estado = false });
                 }
@@ -121,7 +128,7 @@ namespace GuiaApp.Controllers
             {
 
                 return Json(new ImagenJson { Message = ex.Message, Estado = false });
-            }           
+            }
         }
 
         [HttpPost]
@@ -151,7 +158,59 @@ namespace GuiaApp.Controllers
             }
         }
 
-            [HttpDelete]
+        [HttpPost]
+        public async Task<JsonResult> ActualizarUsuario(int IdUsuario, string Nombre, string Apellido, string Password)
+        {
+            try
+            {
+                UsuarioModel usuario = new UsuarioModel();
+                usuario.Id = IdUsuario;
+                usuario.Nombre = Nombre;
+                usuario.Apellido = Apellido;
+                usuario.Password = Password;
+                var response = await _serviceConsume.PutAsync($"Usuario", usuario);
+                if (response.Success)
+                {
+                    return Json(new ImagenJson { Message = "Se registro Correctamente", Estado = true });
+                }
+                else
+                {
+                    return Json(new ImagenJson { Message = "Error al Cargar Imagen", Estado = false });
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new ImagenJson { Message = ex.Message, Estado = false });
+            }
+        }
+
+        [HttpPost]
+        public async Task<JsonResult> RegistrarNegocio(int IdUsuario, string Descripcion, int CategoriaId, int SubCategoriaId)
+        {
+            try
+            {
+                NegocioModel negocio = new NegocioModel();
+                negocio.UsuarioId = IdUsuario;
+                negocio.Descripcion = Descripcion;
+                negocio.CategoriaId = CategoriaId;
+                negocio.SubCategoriaId = SubCategoriaId;
+                var response = await _serviceConsume.PostAsync($"Negocio", negocio);
+                if (response.Success)
+                {
+                    return Json(new ImagenJson { Message = "Se registro Correctamente", Estado = true });
+                }
+                else
+                {
+                    return Json(new ImagenJson { Message = "Error al Registrar Negocio", Estado = false });
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new ImagenJson { Message = ex.Message, Estado = false });
+            }
+        }
+
+        [HttpDelete]
         public async Task<JsonResult> DeleteImagen(int id)
         {
             try
@@ -162,7 +221,7 @@ namespace GuiaApp.Controllers
             }
             catch (Exception ex)
             {
-                return Json(new ImagenJson { Estado = false, Message="Error" });
+                return Json(new ImagenJson { Estado = false, Message = "Error" });
             }
         }
 
@@ -201,6 +260,18 @@ namespace GuiaApp.Controllers
         public async Task<IEnumerable<CategoriaModel>> GetCategoriasAll()
         {
             var response = await _serviceConsume.GetAsync<IEnumerable<CategoriaModel>>("Categoria");
+            return response.Result.OrderBy(x => x.Nombre);
+        }
+
+        public async Task<IEnumerable<NegocioModel>> GetNegocio(int Id)
+        {
+            var response = await _serviceConsume.GetAsync<IEnumerable<NegocioModel>>("Negocio");
+            return response.Result.Where(z => z.UsuarioId == Id).OrderBy(x => x.Descripcion);
+        }
+
+        public async Task<IEnumerable<SubCategoriaModel>> GetSubCategoriasAll()
+        {
+            var response = await _serviceConsume.GetAsync<IEnumerable<SubCategoriaModel>>("SubCategoria");
             return response.Result.OrderBy(x => x.Nombre);
         }
 

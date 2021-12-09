@@ -14,5 +14,7 @@ namespace Infraestructure.UnitOfWork
         IImagenRepository ImagenRepository { get; }
         ITipoRedRepository TipoRedRepository { get;}
         IRedRepository RedRepository { get; }
+        INegocioRepository NegocioRepository { get; }
+        ISubCategoriaRepository SubCategoriaRepository { get; }
     }
 }

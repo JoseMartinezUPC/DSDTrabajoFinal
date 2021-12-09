@@ -65,6 +65,12 @@ namespace GuiaApp.Controllers
             return View();
         }
 
+        public ActionResult LogOff()
+        {
+            HttpContext.Session.SetObjectAsJson("Usuario", null);
+            return RedirectToAction("Cliente", "Home");
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Registro(UsuarioModel usuario)
