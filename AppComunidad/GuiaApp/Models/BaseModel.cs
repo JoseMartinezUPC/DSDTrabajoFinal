@@ -26,4 +26,10 @@ namespace GuiaApp.Models
         // cantidad de registros en base
         public int RecordsFiltered { get { return RecordsTotal; } } 
     }
+
+    public class BaseJson
+    {
+        public string Message { get; set; }
+        public bool Estado { get; set; }
+    }
 }

@@ -2,6 +2,7 @@ C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Messages\b
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Messages\bin\Debug\net5.0\Crosscuting.Messages.dll
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Messages\bin\Debug\net5.0\ref\Crosscuting.Messages.dll
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Messages\bin\Debug\net5.0\Crosscuting.Messages.pdb
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Messages\obj\Debug\net5.0\Crosscuting.Messages.csproj.AssemblyReference.cache
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Messages\obj\Debug\net5.0\Crosscuting.Messages.MensajesError.resources
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Messages\obj\Debug\net5.0\Crosscuting.Messages.csproj.GenerateResource.cache
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\Crosscuting.Messages\obj\Debug\net5.0\Crosscuting.Messages.GeneratedMSBuildEditorConfig.editorconfig

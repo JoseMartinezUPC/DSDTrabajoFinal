@@ -14,51 +14,52 @@
             </div>
             <div class="box-body">
                 <div class="col-md-12">
+                    <input id="IdUsuario" type="hidden" asp-for="Usuario.Id" />
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label asp-for="usuario.Nombre" class="control-label"></label>
-                                <input asp-for="usuario.Nombre" class="form-control" />
-                                <span asp-validation-for="usuario.Nombre" class="text-danger"></span>
+                                <label asp-for="Usuario.Nombre" class="control-label"></label>
+                                <input asp-for="Usuario.Nombre" class="form-control" />
+                                <span asp-validation-for="Usuario.Nombre" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label asp-for="usuario.Apellido" class="control-label"></label>
-                                <input asp-for="usuario.Apellido" class="form-control" />
-                                <span asp-validation-for="usuario.Apellido" class="text-danger"></span>
+                                <label asp-for="Usuario.Apellido" class="control-label"></label>
+                                <input asp-for="Usuario.Apellido" class="form-control" />
+                                <span asp-validation-for="Usuario.Apellido" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label asp-for="usuario.NroDocumento" class="control-label"></label>
-                                <input asp-for="usuario.NroDocumento" class="form-control" readonly />
-                                <span asp-validation-for="usuario.NroDocumento" class="text-danger"></span>
+                                <label asp-for="Usuario.NroDocumento" class="control-label"></label>
+                                <input asp-for="Usuario.NroDocumento" class="form-control" readonly />
+                                <span asp-validation-for="Usuario.NroDocumento" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label asp-for="usuario.TipoDocumentoId" class="control-label"></label>
-                                <select class="form-control" asp-for="usuario.TipoDocumentoId" asp-items="@(new SelectList(ViewBag.ListaDocumentos,"Id","Descripcion"))" disabled>
+                                <label asp-for="Usuario.TipoDocumentoId" class="control-label"></label>
+                                <select class="form-control" asp-for="Usuario.TipoDocumentoId" asp-items="@(new SelectList(ViewBag.ListaDocumentos,"Id","Descripcion"))" disabled>
                                     <option value="">Seleccione..</option>
                                 </select>
-                                <span asp-validation-for="usuario.TipoDocumentoId" class="text-danger"></span>
+                                <span asp-validation-for="Usuario.TipoDocumentoId" class="text-danger"></span>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label asp-for="usuario.Login" class="control-label"></label>
-                                <input asp-for="usuario.Login" class="form-control" readonly />
-                                <span asp-validation-for="usuario.Login" class="text-danger"></span>
+                                <label asp-for="Usuario.Login" class="control-label"></label>
+                                <input asp-for="Usuario.Login" class="form-control" readonly />
+                                <span asp-validation-for="Usuario.Login" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label asp-for="usuario.Password" class="control-label"></label>
-                                <input asp-for="usuario.Password" class="form-control" />
-                                <span asp-validation-for="usuario.Password" class="text-danger"></span>
+                                <label asp-for="Usuario.Password" class="control-label"></label>
+                                <input asp-for="Usuario.Password" class="form-control" />
+                                <span asp-validation-for="Usuario.Password" class="text-danger"></span>
                             </div>
                         </div>
                     </div>
@@ -83,9 +84,23 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="tblImagenes" class="table table-striped table-bordered nowrap" style="width:100%">
+                                    <thead class="bg-light-blue-active">
+                                        <tr>
+                                            <th>Tipo</th>
+                                            <th>Archivo</th>
+                                            <th>Extension</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-12">
-                        <button class="btn btn-primary pull-right"><i class="btn-text">Agregar Imagen &nbsp;&nbsp;</i><i class="fa fa-plus"></i></button>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-imagenes"><i class="btn-text">Agregar Imagen &nbsp;&nbsp;</i><i class="fa fa-plus"></i></button>
                     </div>
                 </div>
             </div>
@@ -145,9 +160,22 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="tblRedes" class="table table-striped table-bordered nowrap" style="width:100%">
+                                    <thead class="bg-light-blue-active">
+                                        <tr>
+                                            <th>Red</th>
+                                            <th>Recurso</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-12">
-                        <button class="btn btn-primary pull-right"><i class="btn-text">Agregar Contacto &nbsp;&nbsp;</i><i class="fa fa-plus"></i></button>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-redessociales"><i class="btn-text">Agregar Contacto &nbsp;&nbsp;</i><i class="fa fa-plus"></i></button>
                     </div>
                 </div>
             </div>
@@ -156,3 +184,89 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="modal-imagenes">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Asociar Imagen</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label asp-for="Imagen.Ruta" class="control-label"></label>
+                            <input id="myfile" type="file" name="files" />
+                            <span asp-validation-for="Imagen.Ruta" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label asp-for="Imagen.TipoImagenId" class="control-label"></label>
+                            <select id="ddlTipoImagen" class="form-control" asp-for="Imagen.TipoImagenId" asp-items="@(new SelectList(ViewBag.ListaTipoImagenes,"Id","Descripcion"))">
+                                <option value=0>Seleccione..</option>
+                            </select>
+                            <span asp-validation-for="Imagen.TipoImagenId" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btnCancelarImagen" type="button" class="btn btn-default pull-left" data-dismiss="modal"><i class="btn-text">Cancelar &nbsp;&nbsp;</i><i class="fa fa-ban"></i></button>
+                <button id="btnGuardarImagen" type="button" class="btn btn-primary"><i class="btn-text">Guardar &nbsp;&nbsp;</i><i class="fa fa-save"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-redessociales">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Registrar Red Social</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label asp-for="Red.Recurso" class="control-label"></label>
+                            <input id="txtRecurso" asp-for="Red.Recurso" class="form-control" />
+                            <span asp-validation-for="Red.Recurso" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label asp-for="Red.TipoRedId" class="control-label"></label>
+                            <select id="ddlTipoRed" class="form-control" asp-for="Red.TipoRedId" asp-items="@(new SelectList(ViewBag.ListaTipoRedes,"Id","Nombre"))">
+                                <option value=0>Seleccione..</option>
+                            </select>
+                            <span asp-validation-for="Red.TipoRedId" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="btnCancelarRed" type="button" class="btn btn-default pull-left" data-dismiss="modal"><i class="btn-text">Cancelar &nbsp;&nbsp;</i><i class="fa fa-ban"></i></button>
+                <button id="btnGuardarRed" type="button" class="btn btn-primary"><i class="btn-text">Guardar &nbsp;&nbsp;</i><i class="fa fa-save"></i></button>
+
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+    var url = {
+        PaginationImagenes: '@Url.Action("PaginationImagen", "Asociado")',
+        PaginationRed: '@Url.Action("PaginationRed", "Asociado")',
+        UploadImagen: '@Url.Action("UploadImagen", "Asociado")',
+        GuardarRed: '@Url.Action("GuardarRed", "Asociado")',
+        DeleteImagen: '@Url.Action("DeleteImagen", "Asociado")',
+        DeleteRed: '@Url.Action("DeleteRed", "Asociado")'
+    };
+    </script>
+    <script src="~/js/Asociado/Modificar.js"></script>
+}

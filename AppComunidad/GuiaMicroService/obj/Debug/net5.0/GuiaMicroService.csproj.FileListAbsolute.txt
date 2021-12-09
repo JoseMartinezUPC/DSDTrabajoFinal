@@ -1,9 +1,3 @@
-C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.csproj.AssemblyReference.cache
-C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.AssemblyInfoInputs.cache
-C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.AssemblyInfo.cs
-C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\bin\Debug\net5.0\appsettings.json
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\bin\Debug\net5.0\GuiaMicroService.exe
@@ -39,6 +33,13 @@ C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\bin\D
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\bin\Debug\net5.0\Domain.Core.pdb
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\bin\Debug\net5.0\Domain.Entities.pdb
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\bin\Debug\net5.0\Infraestructure.Repository.pdb
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\staticwebassets\GuiaMicroService.StaticWebAssets.Manifest.cache
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\staticwebassets\GuiaMicroService.StaticWebAssets.xml
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\scopedcss\bundle\GuiaMicroService.styles.css
@@ -48,4 +49,3 @@ C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\D
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\ref\GuiaMicroService.dll
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.pdb
 C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.genruntimeconfig.cache
-C:\Users\Usuario\Desktop\DSD\DSDTrabajoFinal\AppComunidad\GuiaMicroService\obj\Debug\net5.0\GuiaMicroService.MvcApplicationPartsAssemblyInfo.cs

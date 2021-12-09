@@ -8,7 +8,11 @@ namespace GuiaApp.Models
 {
     public class ModificarAsociadoModel
     {
-        public UsuarioModel usuario { get; set; }
+        public UsuarioModel Usuario { get; set; }
+
+        public ImagenModel Imagen { get; set; }
+
+        public RedModel Red { get; set; }
 
         [Display(Name = "Categoria")]
         public int CategoriaId { get; set; }
