@@ -1,18 +1,11 @@
-﻿using Infraestructure.Repository.Base;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Infraestructure.Repository.Queries
+namespace GuiaApp.Models
 {
-    public class NegocioPaginationViewModel : Pagination<NegocioViewModel> { }
-    public class NegocioPaginationFilterViewModel : BasePagination {
-        public int UsuarioId { get; set; }
-    }
-
-    public class NegocioViewModel
+    public class NegocioEstructuraModel
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
@@ -25,8 +18,13 @@ namespace Infraestructure.Repository.Queries
         public string Categoria { get; set; }
         public string Ruta { get; set; }
 
+    }
 
-
-
+    public class NegocioFilter : BasePagination
+    {
+        public int UsuarioId { get; set; }
+    }
+    public class NegocioPagination : Pagination<NegocioEstructuraModel>
+    {
     }
 }

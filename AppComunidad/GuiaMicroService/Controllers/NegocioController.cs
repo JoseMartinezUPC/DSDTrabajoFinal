@@ -1,5 +1,6 @@
 ﻿using Domain.Core;
 using Domain.Entities;
+using Infraestructure.Repository.Queries;
 using Infraestructure.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -73,6 +74,41 @@ namespace GuiaMicroService.Controllers
         {
             var result = await _unitOfWork.NegocioRepository.Delete(new Negocio { Id = id });
             return result ? Ok(result) : (IActionResult)BadRequest();
+        }
+
+
+
+        [Consumes(MediaTypeNames.Application.Json)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [HttpGet]
+        [Route("NegocioUsuarioId")]
+        public async Task<IActionResult> NegocioUsuarioId([FromQuery] NegocioPaginationFilterViewModel filter)
+        {
+            var result = await _unitOfWork.NegocioRepository.NegocioUsuarioId(filter);
+            return Ok(result);
+        }
+
+        [Consumes(MediaTypeNames.Application.Json)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [HttpGet]
+        [Route("NegocioCategoriasUsuarioId")]
+        public async Task<IActionResult> NegocioCategoriasUsuarioId([FromQuery] NegocioPaginationFilterViewModel filter)
+        {
+            var result = await _unitOfWork.NegocioRepository.NegocioCategoriasUsuarioId(filter);
+            return Ok(result);
+        }
+
+        [Consumes(MediaTypeNames.Application.Json)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [HttpGet]
+        [Route("NegocioRedesUsuarioId")]
+        public async Task<IActionResult> NegocioRedesUsuarioId([FromQuery] NegocioPaginationFilterViewModel filter)
+        {
+            var result = await _unitOfWork.NegocioRepository.NegocioRedesUsuarioId(filter);
+            return Ok(result);
         }
     }
 }
